@@ -45,8 +45,7 @@ with open(file_to_save, "w") as txt_file:
     )
     print(election_results, end="")
 
-    txt_file.write(election_results)
-
+    txt_file.write(election_results) 
 
     # Iterate through candidate list
     for candidate_name in candidate_votes:
@@ -58,6 +57,11 @@ with open(file_to_save, "w") as txt_file:
         vote_percentage = float(votes) / float(total_votes) * 100
 
     #  print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+        candidate_results = (f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+
+        print(candidate_results)
+
+        txt_file.write(candidate_results)
 
     # The winner of the election based on popular vote
         if (votes > winning_count) and (vote_percentage > winning_percentage):
@@ -76,7 +80,10 @@ with open(file_to_save, "w") as txt_file:
 
     print(winning_candidate_summary)
 
+    txt_file.write(winning_candidate_summary)
 
+    
+    
 
     with open(file_to_save, "w") as txt_file:
         txt_file.write("Counties in the Election\n")
