@@ -43,21 +43,24 @@ with open(file_to_save, "w") as txt_file:
         f'Total Votes: {total_votes:,}\n'
         f'-------------------------\n'
     )
-    print(election_results, end="")
+    print(election_results, end="")  
 
     txt_file.write(election_results) 
 
     # Iterate through candidate list
     for candidate_name in candidate_votes:
 
-    # retrieve vote count of candidate
+     # retrieve vote count of candidate
         votes = candidate_votes[candidate_name]
 
-    # The percentage of votes each candidate won
+     # The percentage of votes each candidate won
         vote_percentage = float(votes) / float(total_votes) * 100
 
-    #  print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
-        candidate_results = (f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+     #  print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+        candidate_results = (
+            f"{candidate_name}: "
+            f"{vote_percentage:.1f}%"
+            f"({votes:,})\n")
 
         print(candidate_results)
 
@@ -81,14 +84,6 @@ with open(file_to_save, "w") as txt_file:
     print(winning_candidate_summary)
 
     txt_file.write(winning_candidate_summary)
-
-    
-    
-
-    with open(file_to_save, "w") as txt_file:
-        txt_file.write("Counties in the Election\n")
-        txt_file.write("-------------------------\n")
-        txt_file.write("Arapahoe\nDenver\nJefferson")
 
 
 
