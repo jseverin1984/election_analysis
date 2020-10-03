@@ -10,11 +10,17 @@ to automate all election data for any congressional or local election.
 	
 
 ## Election Audit Results
+
 - How many votes were cast in this congressional election?
 
+A total of 369,711 votes were cast in the congressional election.
 
 - Provide a breakdown of the number of votes and the percentage of total votes for each county in the precinct.
 
+County Votes:
+Jefferson: 10.5%(38,855)
+Denver: 82.8%(306,055)
+Arapahoe: 6.7%(24,801)
 
 - Which county had the largest number of votes?
 Denver county had the largest number of votes with 306,055. Below was the code used to find that data.
@@ -40,10 +46,14 @@ for county_name in county_votes:
 ```
 
 
-	- Provide a breakdown of the number of votes and the percentage of the total votes each candidate received.
+- Provide a breakdown of the number of votes and the percentage of the total votes each candidate received.
 
+![alt text](https://github.com/jseverin1984/election_analysis/blob/master/Resources/candidates.png "cadidate results")
 
-	- Which candidate won the election, what was their vote count, and what was their percentage of the total votes?
+- Which candidate won the election, what was their vote count, and what was their percentage of the total votes?
+
+![alt text](https://github.com/jseverin1984/election_analysis/blob/master/Resources/overall_winner.png "overall winner results")
+
 
 ## Election Audit Summary
 
