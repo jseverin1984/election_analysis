@@ -10,16 +10,16 @@ to automate all election data for any congressional or local election.
 	
 
 ## Election Audit Results
-	- How many votes were cast in this congressional election?
+- How many votes were cast in this congressional election?
 
 
-	- Provide a breakdown of the number of votes and the percentage of total votes for each county in the precinct.
+- Provide a breakdown of the number of votes and the percentage of total votes for each county in the precinct.
 
 
-	- Which county had the largest number of votes?
-		Denver county had the largest number of votes with 306,055. Below was the code used to find that data.
-		```
-		for county_name in county_votes:
+- Which county had the largest number of votes?
+Denver county had the largest number of votes with 306,055. Below was the code used to find that data.
+```
+for county_name in county_votes:
         # 6b: Retrieve the county vote count.
         votes_each_county = county_votes[county_name]
         # 6c: Calculate the percent of total votes for the county.
@@ -37,7 +37,7 @@ to automate all election data for any congressional or local election.
 
             largest_county_votes_count = votes_each_county
             largest_county = county_name
-	```
+```
 
 
 	- Provide a breakdown of the number of votes and the percentage of the total votes each candidate received.
